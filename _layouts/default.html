@@ -5,24 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+    <style>
+      /* Dropdown styles */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #111;
+        border: 1px solid #33ff33;
+        z-index: 1;
+        min-width: 160px;
+      }
+
+      .dropdown-content a {
+        display: block;
+        padding: 8px 12px;
+        color: #33ff33;
+        text-decoration: none;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #222;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
   </head>
 
   <body>
-
     <header>
       <div class="container">
         <a id="a-title" href="{{ '/' | relative_url }}">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
         </a>
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+
         <nav>
-            <a href="{{ site.baseurl }}/">Home</a> |
-            <a href="{{ site.baseurl }}/about/">About</a> |
-            <a href="{{ site.baseurl }}/research/">Research</a>
+          <a href="{{ site.baseurl }}/">Home</a> |
+          <a href="{{ site.baseurl }}/about/">About</a> |
+
+          <div class="dropdown">
+            <a href="{{ site.baseurl }}/research/">Research ▼</a>
+            <div class="dropdown-content">
+              <a href="{{ site.baseurl }}/research/testing/">Testing</a>
+              <a href="{{ site.baseurl }}/research/journey/">Journey</a>
+            </div>
+          </div>
         </nav>
-
-
-
       </div>
     </header>
 
