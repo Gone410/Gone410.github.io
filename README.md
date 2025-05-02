@@ -1,4 +1,4 @@
-## Hi there 👋
+## Currently doing my own research
 
 <!--
 **Gone410/Gone410** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
