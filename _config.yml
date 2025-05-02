@@ -3,6 +3,6 @@
 #- jekyll-remote-theme # add this line to the plugins list if you already have one
 theme: jekyll-theme-hacker
 
-# layout: default
+layout: default
 # title: Testing
-# permalink: /research/testing/
+permalink: /research/testing/
