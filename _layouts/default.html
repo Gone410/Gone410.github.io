@@ -8,36 +8,55 @@
 
     <style>
       /* Dropdown styles */
-     .dropdown {
-  position: relative;
-  display: inline-block;
-}
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #111;
-  border: 1px solid #33ff33;
-  z-index: 1;
-  min-width: 160px;
-}
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #111;
+        border: 1px solid #33ff33;
+        z-index: 1;
+        min-width: 160px;
+      }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+      .dropdown-content a {
+        display: block;
+        padding: 8px 12px;
+        color: #33ff33;
+        text-decoration: none;
+      }
 
-.dropdown > a:after {
-  content: "▼";
-  position: absolute;
-  right: 0;
-  font-size: 16px;
-  transition: transform 0.3s ease-in-out;
-}
+      .dropdown-content a:hover {
+        background-color: #222;
+      }
 
-.dropdown:hover > a:after {
-  transform: rotate(180deg);
-}
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
 
+      /* Style for the "Research" link and arrow */
+      .dropdown > a {
+        display: inline-block;
+        position: relative;
+        padding-right: 20px; /* Space for the arrow */
+      }
+
+      /* Add the arrow */
+      .dropdown > a:after {
+        content: "▼"; /* This is the down arrow */
+        position: absolute;
+        right: 0;
+        font-size: 16px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Rotate the arrow on hover */
+      .dropdown:hover > a:after {
+        transform: rotate(180deg); /* Rotate 180 degrees */
+      }
     </style>
   </head>
 
@@ -51,10 +70,10 @@
 
         <nav>
           <a href="{{ site.baseurl }}/">Home</a> |
-          <a href="{{ site.baseurl }}/about/">About</a> |
+          <a href="{{ site.baseurl }}/about/">About</a> | 
 
           <div class="dropdown">
-            <a href="{{ site.baseurl }}/research/">Research ▼</a>
+            <a href="{{ site.baseurl }}/research/">Research</a>
             <div class="dropdown-content">
               <a href="{{ site.baseurl }}/research/testing/">Testing</a>
               <a href="{{ site.baseurl }}/research/journey/">Journey</a>
